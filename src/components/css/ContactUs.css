@@ -37,9 +37,7 @@ h1 {
 }
 
 /* Form input fields */
-input[type="text"],
-input[type="email"],
-textarea {
+.contactname {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -58,7 +56,7 @@ label {
 }
 
 /* Form submit button */
-button {
+#contactbutton {
   display: block;
   width: 100%;
   padding: 12px;

@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import '../components/css/ContactUs.css';
+import "../components/css/ContactUs.css";
 export default function ContactUs() {
   const form = useRef();
 
@@ -29,39 +29,48 @@ export default function ContactUs() {
   };
 
   return (
-    <div  id="contact" className="container mt-5" style={{background:"lightgrey"}}>
-      <h1 style={{color:"black"}}>Contact Us</h1>
-      
-<form ref={form} onSubmit={sendEmail}>
-  <div className="mb-3">
-    <label htmlFor="name" className="form-label">
-      Name
-    </label>
-    <input type="text" name="to_name" required />
-  </div>
-  <div className="mb-3">
-    <label htmlFor="email" className="form-label" required>
-      Email
-    </label>
-    <input type="email" name="from_name" required/>
-  </div>
-  <div className="mb-3">
-    <label htmlFor="message" className="form-label">
-      Message
-    </label>
-    <textarea name="message" />
-  </div>
-  <button type="submit" value="Send" className="btn btn-primary">
-    Send Message
-  </button>
-</form>
+    <div
+      id="contact"
+      className="container mt-5"
+      style={{ background: "lightgrey" }}
+    >
+      <h1 style={{ color: "black" }}>Contact Us</h1>
 
+      <form ref={form} onSubmit={sendEmail}>
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">
+            Name
+          </label>
+          <input className="contactname" type="text" name="to_name" required />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label" required>
+            Email
+          </label>
+          <input
+            className="contactname"
+            type="email"
+            name="from_name"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="message" className="form-label">
+            Message
+          </label>
+          <textarea className="contactname" name="message" />
+        </div>
+        <button
+          id="contactbutton"
+          type="submit"
+          value="Send"
+          className="btn btn-primary"
+        >
+          Send Message
+        </button>
+      </form>
 
       <ToastContainer />
     </div>
-
-
-
-
   );
 }

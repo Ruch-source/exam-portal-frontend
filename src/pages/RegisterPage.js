@@ -197,7 +197,7 @@ const RegisterPage = () => {
             // onChange={(e) => {
             //   setLastName(e.target.value);
             // }}
-            required
+           
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
           <Form.Control.Feedback type="invalid">
